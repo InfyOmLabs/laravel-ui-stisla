@@ -1,5 +1,10 @@
 # Laravel UI Stisla
 
+[![Total Downloads](https://poser.pugx.org/infyomlabs/laravel-ui-stisla/downloads)](https://packagist.org/packages/infyomlabs/laravel-ui-stisla)
+[![Monthly Downloads](https://poser.pugx.org/infyomlabs/laravel-ui-stisla/d/monthly)](https://packagist.org/packages/infyomlabs/laravel-ui-stisla)
+[![Daily Downloads](https://poser.pugx.org/infyomlabs/laravel-ui-stisla/d/daily)](https://packagist.org/packages/infyomlabs/laravel-ui-stisla)
+[![License](https://poser.pugx.org/infyomlabs/laravel-ui-stisla/license)](https://packagist.org/packages/infyomlabs/laravel-ui-stisla)
+
 [Laravel Frontend Scaffolding](https://laravel.com/docs/7.x/frontend) for [Stisla UI](https://demo.getstisla.com/index.html) Theme.
 
 ## Installation
