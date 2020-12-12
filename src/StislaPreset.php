@@ -76,8 +76,6 @@ class StislaPreset extends Preset
         $this->ensureDirectoriesExist($viewsPath);
 
         $this->scaffoldAuth();
-
-        $this->scaffoldController();
     }
 
     protected function ensureDirectoriesExist($viewsPath)
