@@ -69,7 +69,6 @@ class StislaPreset extends Preset
         copy(__DIR__.'/../stisla-stubs/vendors/bootstrap/webpack.mix.js', base_path('webpack.mix.js'));
     }
 
-
     public function installAuth()
     {
         $viewsPath = LaravelUtils::getViewPath();
@@ -78,9 +77,7 @@ class StislaPreset extends Preset
 
         $this->scaffoldAuth();
 
-        if (! $this->isFortify) {
-            $this->scaffoldController();
-        }
+        $this->scaffoldController();
     }
 
     protected function ensureDirectoriesExist($viewsPath)
@@ -143,9 +140,7 @@ class StislaPreset extends Preset
 
         $this->addHomeRoute();
 
-        if (! $this->isFortify) {
-            $this->addAuthRoutes();
-        }
+        $this->addAuthRoutes();
 
         tap(new Filesystem(), function ($filesystem) {
             $filesystem->copyDirectory(__DIR__.'/../stisla-stubs/views/auth', resource_path('views/auth'));
