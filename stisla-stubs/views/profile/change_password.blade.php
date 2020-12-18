@@ -6,7 +6,7 @@
                 <h5 class="modal-title">Change Password</h5>
                 <button type="button" aria-label="Close" class="close outline-none" data-dismiss="modal">×</button>
             </div>
-            {{ Form::open(['id'=>'changePasswordForm','files'=>true]) }}
+            <form method="POST" id='changePasswordForm'>
             <div class="modal-body">
                 @if ($errors->any())
                     <div class="alert alert-danger">
@@ -17,13 +17,13 @@
                         </ul>
                     </div>
                 @endif
-                <div class="alert alert-danger d-none" id="editPasswordValidationErrorsBox"></div>
-                    {{ Form::hidden('user_id',null,['id'=>'changePassUserId']) }}
-                {{ Form::hidden('is_active',1) }}
-                {{csrf_field()}}
+                <div class="alert alert-danger d-none" id=""></div>
+                    <input type="hidden" name="is_active" value="1">
+                    <input type="hidden" name="user_id" id="editPasswordValidationErrorsBox">
+                    {{csrf_field()}}
                 <div class="row">
                     <div class="form-group col-sm-12">
-                        {{ Form::label('current password', 'Current Password:')}}<span
+                        <label>Current Password:</label><span
                                 class="required confirm-pwd"></span><span class="required">*</span>
                         <div class="input-group">
                             <input class="form-control input-group__addon" id="pfCurrentPassword" type="password"
@@ -36,7 +36,7 @@
                         </div>
                     </div>
                     <div class="form-group col-sm-12">
-                        {{ Form::label('password', 'New Password:') }}<span
+                        <label>New Password:</label><span
                                 class="required confirm-pwd"></span><span class="required">*</span>
                         <div class="input-group">
                             <input class="form-control input-group__addon" id="pfNewPassword" type="password"
@@ -49,7 +49,7 @@
                         </div>
                     </div>
                     <div class="form-group col-sm-12">
-                        {{ Form::label('password_confirmation', 'Confirm Password:') }}<span
+                        <label>Confirm Password:</label><span
                                 class="required confirm-pwd"></span><span class="required">*</span>
                         <div class="input-group">
                             <input class="form-control input-group__addon" id="pfNewConfirmPassword" type="password"
@@ -63,12 +63,12 @@
                     </div>
                 </div>
                 <div class="text-right">
-                    {{ Form::button('Save', ['type'=>'submit','class' => 'btn btn-primary','id'=>'btnPrPasswordEditSave','data-loading-text'=>"<span class='spinner-border spinner-border-sm'></span> Processing..."]) }}
+                    <button type="submit" class="btn btn-primary" id="btnPrPasswordEditSave" data-loading-text="<span class='spinner-border spinner-border-sm'></span> Processing...">Save</button>
                     <button type="button" class="btn btn-light ml-1" data-dismiss="modal">Cancel
                     </button>
                 </div>
             </div>
-            {{ Form::close() }}
+            </form>>
         </div>
     </div>
 </div>
