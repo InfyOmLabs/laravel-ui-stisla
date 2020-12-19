@@ -32,5 +32,11 @@
                 "InfyOm\\StislaPreset\\FortifyStislaPresetServiceProvider"
             ]
         }
-    }
+    },
+    "funding": [
+        {
+            "type": "opencollective",
+            "url": "https://opencollective.com/infyomlabs"
+        }
+    ]
 }
