@@ -31,7 +31,7 @@ To Generate a full authentication UI,
 
 `php artisan ui stisla --auth`
 
-To Install just AdminLTE theme assets,
+To Install just Stisla theme assets,
 
 `php artisan ui stisla`
 
@@ -51,7 +51,7 @@ This package also provides support for Laravel Fortify for authentication scaffo
 
 Run a command,
 
-`php artisan ui adminlte-stisla --auth`
+`php artisan ui stisla-fortify --auth`
 
 And then run,
 
