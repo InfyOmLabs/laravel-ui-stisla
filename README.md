@@ -31,7 +31,7 @@ To Generate a full authentication UI,
 
 `php artisan ui stisla --auth`
 
-To Install just AdminLTE theme assets,
+To Install just Stisla theme assets,
 
 `php artisan ui stisla`
 
