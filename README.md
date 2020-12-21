@@ -98,6 +98,13 @@ You can also check out our other paid products on [CodeCanyon](https://codecanyo
 
 Also, Do not forget to add your website to [Made with InfyOm Generator List](https://github.com/InfyOmLabs/laravel-generator/blob/develop/made-with-generator.md) list.
 
+## Video Tutorials
+
+Checkout Video Tutorial - **By**: [Shailesh Ladumor](https://github.com/shailesh-ladumor)
+
+|[<img src="https://img.youtube.com/vi/6cxIGi-Ff8o/0.jpg" width="480">](https://youtu.be/6cxIGi-Ff8o)|[<img src="https://img.youtube.com/vi/DjK9jPDdcR0/0.jpg" width="480">](https://youtu.be/DjK9jPDdcR0)|
+|---|---|
+
 ## Screenshots
 
 ### Login
