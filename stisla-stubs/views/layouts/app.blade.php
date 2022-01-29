@@ -20,7 +20,6 @@
     <link rel="stylesheet" href="{{ asset('web/css/components.css')}}">
     @yield('page_css')
 
-
     @yield('css')
 </head>
 <body>
@@ -67,6 +66,7 @@
 <script>
     let loggedInUser =@json(\Illuminate\Support\Facades\Auth::user());
     let loginUrl = '{{ route('login') }}';
+    const userUrl = '{{url('users')}}';
     // Loading button plugin (removed from BS4)
     (function ($) {
         $.fn.button = function (action) {
