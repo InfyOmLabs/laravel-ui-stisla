@@ -31,14 +31,13 @@ class StislaPreset extends Preset
      *
      * @return array
      */
-    protected static function updatePackageArray(array $packages)
+    protected static function updatePackageArray(array $packages, $configurationKey)
     {
-        return [
+        $stislaPackages = [
+            'dependencies' => [
                 "bootstrap"                     => "^4.0.0",
                 "jquery"                        => "^3.2",
                 "popper.js"                     => "^1.12",
-                "sass"                          => "^1.15.2",
-                "sass-loader"                   => "^7.1.0",
                 "@fortawesome/fontawesome-free" => "^5.13.1",
                 "jquery.nicescroll"             => "^3.7.6",
                 "vue-template-compiler"         => "^2.6.12",
@@ -48,11 +47,18 @@ class StislaPreset extends Preset
                 "sweetalert"                    => "^1.1.3",
                 "select2"                       => "^4.0.13",
                 "izitoast"                      => "^1.4.0",
-            ] + $packages;
+            ],
+            'devDependencies' => [
+                "webpack" => "^5.23.0",
+            ]
+        ];
+
+        return $stislaPackages[$configurationKey] + $packages;
     }
 
     public function install()
     {
+        static::updatePackages(false);
         static::updatePackages(false);
         static::updateWebpackConfiguration();
         static::removeNodeModules();
