@@ -9,57 +9,9 @@
 
 [Laravel Frontend Scaffolding](https://laravel.com/docs/7.x/frontend) for [Stisla UI](https://demo.getstisla.com/index.html) Theme.
 
-## Installation
+## Documentation
 
-Run a command,
-
-`composer require infyomlabs/laravel-ui-stisla`
-
-For Laravel 7,
-
-`composer require infyomlabs/laravel-ui-stisla:^2.0`
-
-For Laravel 6,
-
-`composer require infyomlabs/laravel-ui-stisla:^1.0`
-
-## Usage
-
-Run a command,
-
-To Generate a full authentication UI,
-
-`php artisan ui stisla --auth`
-
-To Install just Stisla theme assets,
-
-`php artisan ui stisla`
-
-And then run,
-
-`npm install && npm run dev`
-
-Or for production,
-
-`npm install && npm run prod`
-
-## Usage with Laravel Fortify (Laravel 8.x only)
-
-This package also provides support for Laravel Fortify for authentication scaffolding.
-
-**NOTE**: Don't forget to install and run Laravel Fortify and perform its required installation steps.
-
-Run a command,
-
-`php artisan ui stisla-fortify --auth`
-
-And then run,
-
-`npm install && npm run dev`
-
-Or for production,
-
-`npm install && npm run prod`
+Read [Documentation](https://infyom.com/open-source/laravel-ui-stisla/docs) for detailed installation steps and usage.
 
 ## Support Us
 
@@ -67,6 +19,12 @@ We have created [14+ Laravel packages](https://github.com/InfyOmLabs) which got 
 We invested a lot of resources into creating these packages and maintaining them.
 
 You can support us by either sponsoring us or buying one of our paid products. Or help us by spreading the word about us on social platforms via tweets and posts.
+
+### Buy our Paid Products
+
+[![InfyCal](https://assets.infyom.com/open-source/new/infycal-banner.png)](https://1.envato.market/ZdJX4q)
+
+You can also check out our other paid products on [CodeCanyon](https://1.envato.market/BXAnR1).
 
 ### Sponsors
 
@@ -80,12 +38,6 @@ You can support us by either sponsoring us or buying one of our paid products. O
 
 <a href="https://opencollective.com/infyomlabs#backer"><img src="https://opencollective.com/infyomlabs/backers.svg?width=890"></a>
 
-### Buy our Paid Products
-
-[![InfyJobs](https://assets.infyom.com/open-source/infyjobs-banner.png)](https://1.envato.market/P0ONVj)
-
-You can also check out our other paid products on [CodeCanyon](https://codecanyon.net/user/infyomlabs/portfolio).
-
 ### Follow Us
 
 - [Twitter](https://twitter.com/infyom)
@@ -97,6 +49,19 @@ You can also check out our other paid products on [CodeCanyon](https://codecanyo
 ## Made with InfyOm Generator
 
 Also, Do not forget to add your website to [Made with InfyOm Generator List](https://github.com/InfyOmLabs/laravel-generator/blob/develop/made-with-generator.md) list.
+
+## Security
+
+If you discover any security-related issues, create an issue using the issue tracker.
+
+## Credits
+
+- [InfyOm Technologies](https://github.com/infyomlabs)
+- [All Contributors](../../contributors)
+
+## License
+
+The MIT License (MIT). Please see [License File](LICENSE.md) for more information.
 
 ## Video Tutorials
 
