@@ -10,7 +10,6 @@ use InfyOm\GeneratorHelpers\LaravelUtils;
 use Laravel\Ui\Presets\Preset;
 use Symfony\Component\Finder\SplFileInfo;
 
-
 class StislaPreset extends Preset
 {
     /** @var Command */
@@ -27,7 +26,7 @@ class StislaPreset extends Preset
     /**
      * Update the given package array.
      *
-     * @param  array  $packages
+     * @param array $packages
      *
      * @return array
      */
@@ -35,22 +34,22 @@ class StislaPreset extends Preset
     {
         $stislaPackages = [
             'dependencies' => [
-                "bootstrap"                     => "^4.0.0",
-                "jquery"                        => "^3.2",
-                "popper.js"                     => "^1.12",
-                "@fortawesome/fontawesome-free" => "^5.13.1",
-                "jquery.nicescroll"             => "^3.7.6",
-                "vue-template-compiler"         => "^2.6.12",
-                "vue"                           => "^2.5.17",
-                "datatables.net-dt"             => "^1.10.21",
-                "jsrender"                      => "^1.0.5",
-                "sweetalert"                    => "^1.1.3",
-                "select2"                       => "^4.0.13",
-                "izitoast"                      => "^1.4.0",
+                'bootstrap'                     => '^4.0.0',
+                'jquery'                        => '^3.2',
+                'popper.js'                     => '^1.12',
+                '@fortawesome/fontawesome-free' => '^5.13.1',
+                'jquery.nicescroll'             => '^3.7.6',
+                'vue-template-compiler'         => '^2.6.12',
+                'vue'                           => '^2.5.17',
+                'datatables.net-dt'             => '^1.10.21',
+                'jsrender'                      => '^1.0.5',
+                'sweetalert'                    => '^1.1.3',
+                'select2'                       => '^4.0.13',
+                'izitoast'                      => '^1.4.0',
             ],
             'devDependencies' => [
-                "webpack" => "^5.23.0",
-            ]
+                'webpack' => '^5.23.0',
+            ],
         ];
 
         return $stislaPackages[$configurationKey] + $packages;
@@ -75,7 +74,6 @@ class StislaPreset extends Preset
         copy(__DIR__.'/../stisla-stubs/vendors/bootstrap/webpack.mix.js', base_path('webpack.mix.js'));
     }
 
-
     public function installAuth()
     {
         $viewsPath = LaravelUtils::getViewPath();
@@ -84,26 +82,26 @@ class StislaPreset extends Preset
 
         $this->scaffoldAuth();
 
-        if (! $this->isFortify) {
+        if (!$this->isFortify) {
             $this->scaffoldController();
         }
     }
 
     protected function ensureDirectoriesExist($viewsPath)
     {
-        if (! file_exists($viewsPath.'layouts')) {
+        if (!file_exists($viewsPath.'layouts')) {
             mkdir($viewsPath.'layouts', 0755, true);
         }
 
-        if (! file_exists($viewsPath.'profile')) {
+        if (!file_exists($viewsPath.'profile')) {
             mkdir($viewsPath.'profile', 0755, true);
         }
 
-        if (! file_exists($viewsPath.'auth')) {
+        if (!file_exists($viewsPath.'auth')) {
             mkdir($viewsPath.'auth', 0755, true);
         }
 
-        if (! file_exists($viewsPath.'auth/passwords')) {
+        if (!file_exists($viewsPath.'auth/passwords')) {
             mkdir($viewsPath.'auth/passwords', 0755, true);
         }
     }
@@ -128,7 +126,7 @@ class StislaPreset extends Preset
 
     protected function scaffoldController()
     {
-        if (! is_dir($directory = app_path('Http/Controllers/Auth'))) {
+        if (!is_dir($directory = app_path('Http/Controllers/Auth'))) {
             mkdir($directory, 0755, true);
         }
 
@@ -149,7 +147,7 @@ class StislaPreset extends Preset
 
         $this->addHomeRoute();
 
-        if (! $this->isFortify) {
+        if (!$this->isFortify) {
             $this->addAuthRoutes();
         }
 
@@ -158,7 +156,6 @@ class StislaPreset extends Preset
             $filesystem->copyDirectory(__DIR__.'/../stisla-stubs/views/layouts', resource_path('views/layouts'));
             $filesystem->copyDirectory(__DIR__.'/../stisla-stubs/views/profile', resource_path('views/profile'));
             $filesystem->copy(__DIR__.'/../stisla-stubs/home.blade.php', resource_path('views/home.blade.php'));
-
 
             collect($filesystem->allFiles(base_path('vendor/laravel/ui/stubs/migrations')))
                 ->each(function (SplFileInfo $file) use ($filesystem) {
